@@ -27,7 +27,7 @@ Usage
 To start the API server, run the following command:
 
 ```
-dotnet run --project ShipManagement
+dotnet run --project ShipManagement/ShipManagement.Api/
 ```
 
 You can then make HTTP requests to the server using a tool like `curl`, Postman or a web browser.
