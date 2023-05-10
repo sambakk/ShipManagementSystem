@@ -35,6 +35,8 @@ The application will be available at http://localhost:3000.
 
 # End-to-end Testing
 
+**Note**: Ensure the backend is operational prior to conducting end-to-end testing, as this will provide the necessary data for the frontend to function correctly.
+
 Run the following command to run end-to-end tests using Cypress in headless mode.
 
 ```bash
