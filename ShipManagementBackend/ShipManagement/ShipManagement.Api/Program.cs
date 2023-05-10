@@ -7,6 +7,7 @@ using ShipManagement.Infrastructure.Midllewares;
 using ShipManagement.Infrastructure.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Add services to the container
 builder.Services.AddControllers();
@@ -21,7 +22,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add DB Context
 builder.Services.AddDbContext<ShipManagementDbContext>(options =>
     options.UseInMemoryDatabase("ShipManagementDb"), ServiceLifetime.Singleton, ServiceLifetime.Singleton);
-    
+
 // Add Api Versionning
 builder.Services.AddApiVersioning(opt =>
     {
@@ -36,6 +37,16 @@ builder.Services.AddApiVersioning(opt =>
 // Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// CORS for the frontend app
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader(); ;
+                      });
+});
 
 var app = builder.Build();
 
@@ -57,6 +68,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware(typeof(GlobalExceptionHandlingMiddleware));
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
