@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    container_name: ShipManagementBackend
+    build: 
+      context: ./ShipManagementBackend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+  frontend:
+    container_name: ShipManagementFront
+    build: 
+      context: ./ShipManagementFront
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"

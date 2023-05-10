@@ -1,0 +1,80 @@
+{
+  "name": "ShipManagementSystem",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "Small PoC of a ship management system",
+  "author": {
+    "name": "Abdessamad Bakkach",
+    "url": "https://github.com/sambakk"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/d3": "^6.2.0",
+    "@types/jest": "^26.0.15",
+    "@types/material-ui": "^0.21.8",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
+    "axios": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "hamburger-react": "^2.4.1",
+    "material-react-table": "^1.11.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet-async": "^1.3.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
+    "test:e2e": "cypress run",
+    "test:e2e-gui": "cypress open"
+
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:cypress/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.6",
+    "@typescript-eslint/parser": "^4.31.2",
+    "add": "^2.0.6",
+    "cypress": "^12.11.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.2",
+    "yarn": "^1.22.19"
+  }
+}
