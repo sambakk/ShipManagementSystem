@@ -3,6 +3,12 @@ Ship Management Backend
 
 This project provides a RESTful API for managing ships.
 
+Code Architecture & Patterns Used
+---------------------------------
+![Clean Architecture](https://i.ibb.co/k1rCFB5/ca.png)
+![CQRS Pattern](https://i.ibb.co/9t5xBvG/cqrs.png)
+![Repository Pattern](https://i.ibb.co/MkG79yP/repo.png)
+
 Installation
 ------------
 
